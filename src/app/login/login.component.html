@@ -1,0 +1,92 @@
+<section id="login" class="h-100 gradient-form background-login">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-10 col-lg-10">
+        <div class="card mb-3 rounded-4 text-black">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-6 background-gradiant">
+              <img
+                class="w-100 h-100"
+                src="../../assets/imgs/login/03.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+                <div class="row">
+                  <div class="col-md-12 col-lg-12">
+                    <ul class="list-group list-group-horizontal w-100 h-100">
+                      <li
+                        class="list-group-item gradient-colors text-white w-100 h-100 disabled"
+                      >
+                        Login
+                      </li>
+                      <li
+                        class="list-group-item list-group-item-action list-group-propieties"
+                        routerLink="/register"
+                      >
+                        Register
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <img
+                    src="../../assets/imgs/logo.png"
+                    style="width: 195px"
+                    alt="logo"
+                  />
+                  <h4 class="mt-1 mb-3">We are The Games Seeker's</h4>
+                </div>
+                <form>
+                  <h3 class="card-title text-center mb-4">
+                    Please login to your acount
+                  </h3>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">User (Email)</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Example: email@email.com"
+                      aria-describedby="email"
+                    />
+                    <div id="emailShare" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Example: coxinha123"
+                      class="form-control"
+                      id="password"
+                    />
+                  </div>
+                  <div class="d-grid gap-2 mx-auto mt-4">
+                    <button
+                      class="btn btn-primary gradient-colors"
+                      type="button"
+                    >
+                      Entrar
+                    </button>
+                  </div>
+                </form>
+                <hr class="my-4" />
+                <div class="text-center font-weight-bold">
+                  <a class="text-muted" routerLink="/forgot-password"
+                    >Forgot password?</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
