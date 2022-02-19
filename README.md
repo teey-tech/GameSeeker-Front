@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/teey-tech/GameSeeker-Front/develop/src/assets/git_imgs/gameseeker.gif" max-width="1000px" width="1000px" align="center" alt="Logo Gif">
 
-<img src="https://raw.githubusercontent.com/teey-tech/GameSeeker/develop/assets/GameSeeker.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Logo png">
+<img src="https://raw.githubusercontent.com/teey-tech/GameSeeker-Front/develop/src/assets/git_imgs/logo.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Logo png">
 
 <p align="left"> <strong>GameSeeker</strong> where you can find every game you desire</strong>.
 <br>
