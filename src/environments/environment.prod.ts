@@ -3,11 +3,11 @@ export const environment = {
   name: '',
   token: '',
   picture: '',
-   cpf: '',
+  cpf: '',
   address: '',
   state: '',
- country: '',
- favoritTheme: '',
+  country: '',
+  favoritTheme: '',
   idUser: 0,
   heroku: 'https://gameseeker.herokuapp.com'
 };
