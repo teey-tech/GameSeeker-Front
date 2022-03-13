@@ -32,6 +32,21 @@
                     Please Register to login
                   </h3>
                   <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      placeholder="Silvio Santos"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      aria-describedby="name"
+                      [(ngModel)]="user.name"
+                    />
+                    <div id="email" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="email" class="form-label">User (Email)</label>
                     <input
                       type="email"
@@ -40,19 +55,83 @@
                       class="form-control"
                       id="email"
                       aria-describedby="email"
+                      [(ngModel)]="user.email"
                     />
                     <div id="email" class="form-text">
                       We'll never share your email with anyone else.
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="cpf"
+                      id="cpf"
+                      placeholder="Example: 48148848841"
+                      [(ngModel)]="user.cpf"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="country"
+                      id="country"
+                      placeholder="Example: Brazil"
+                      [(ngModel)]="user.country"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="state"
+                      id="state"
+                      placeholder="Example: São Paulo"
+                      [(ngModel)]="user.state"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="address"
+                      id="address"
+                      placeholder="Example: Avenida Paulista n150"
+                      [(ngModel)]="user.address"
+                    />
+                  </div>
+                  <div class="mb-3">
                     <label for="picture" class="form-label">Picture</label>
                     <input
                       class="form-control"
-                      type="file"
+                      type="text"
                       name="picture"
                       id="picture"
+                      placeholder="Example: https://i.imgur.com/IemIQX4.jpeg"
+                      [(ngModel)]="user.picture"
                     />
+                  </div>
+                  <div class="mb-3">
+                    <label for="favoritTheme" class="form-label"
+                      >Favorit Game Theme</label
+                    >
+                    <select
+                      name="favoritTheme"
+                      id="favoritTheme"
+                      class="form-control"
+                    >
+                      <option>Select Your favorit Game Theme</option>
+                      <option value="Administrador">RPG</option>
+                      <option value="Action">Action</option>
+                      <option value="Strategy">Strategy</option>
+                      <option value="Horror">Horror</option>
+                      <option value="Sports">Sports</option>
+                    </select>
                   </div>
                   <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
@@ -62,6 +141,7 @@
                       name="password"
                       placeholder="Example: coxinha123"
                       id="password"
+                      (input)="confirmPass($event)"
                     />
                   </div>
                   <div class="mb-3">
@@ -74,12 +154,14 @@
                       placeholder="Example: coxinha123"
                       name="confirmPassword"
                       id="confirmPassword"
+                      [(ngModel)]="user.password"
                     />
                   </div>
                   <div class="d-grid gap-2 mx-auto mt-4">
                     <button
                       class="btn btn-primary gradient-colors"
-                      type="button"
+                      type="submit"
+                      (click)="register()"
                     >
                       Register
                     </button>

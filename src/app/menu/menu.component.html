@@ -1,39 +1,131 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<header>
+  <!-- Jumbotron -->
+  <div class="p-3 text-center text-white gradient-colors">
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0"
+        >
+          <span class="ms-md-2 navbar-brand"> GameSeeker </span>
+        </div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto d-flex align-items-center">
-      <li class="nav-item active">
-        <img
-          src="https://github.com/teey-tech.png"
-          alt="github image"
-          class="imgPerfil"
-        />
-      </li>
-      <li class="nav-item">
-        <p class="font-weight-bold text-white m-0 ml-3">Bem vindo Thiago</p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"
-          ><i class="fa fa-pencil-square-o text-white" aria-hidden="true"></i
-        ></a>
-      </li>
-    </ul>
-    <div>
-      <a class="font-weight-bold text-white" href="#sair"
-        ><span>Sair</span
-        ><i class="fa fa-sign-out ml-1 text-white" aria-hidden="true"></i
-      ></a>
+        <div class="col-md-4">
+          <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
+            <input
+              autocomplete="off"
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+            />
+            <span class="border-0 d-lg-flex"
+              ><i class="fa fa-search search-positioning"></i
+            ></span>
+          </form>
+        </div>
+
+        <div
+          class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center"
+        >
+          <div class="d-flex align-items-center">
+            <!-- Not Loged  -->
+            <div *ngIf="!auth.loged()">
+              <a class="auth-customization" routerLink="/login">
+                <i class="fa fa-sign-in me-1" aria-hidden="true"></i>Login</a
+              >
+            </div>
+            <div *ngIf="!auth.loged()">
+              <a class="auth-customization" routerLink="/register"
+                ><i class="fa fa-lock me-1 ms-3" aria-hidden="true"></i
+                >Register</a
+              >
+            </div>
+            <!-- /Not Loged  -->
+
+            <!-- Loged -->
+            <!-- Cart -->
+            <a class="text-reset me-3" href="#" *ngIf="auth.loged()">
+              <span><i class="fa fa-shopping-cart"></i></span>
+              <span class="badge rounded-pill badge-notification bg-danger"
+                >1</span
+              >
+            </a>
+            <a class="text-reset me-3" href="#" *ngIf="auth.loged()">
+              <i class="fa fa-money me-2" aria-hidden="true"></i
+              >{{ this.auth.seekerCoins() }}</a
+            >
+
+            <!-- User -->
+            <div class="dropdown" *ngIf="auth.loged()">
+              <a
+                class="text-reset dropdown-toggle d-flex align-items-center hidden-arrow"
+                href="#"
+                id="dropdownMenuButton2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="{{ this.auth.picture() }}"
+                  class="rounded-circle"
+                  height="40"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa fa-user me-2" aria-hidden="true"></i>My
+                    Profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa fa-themeisle me-2" aria-hidden="true"></i
+                    >Cadastrar Tema</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa fa-gamepad me-2" aria-hidden="true"></i
+                    >Cadastrar Jogos</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="logout()"
+                    ><i class="fa fa-sign-out me-2" aria-hidden="true"></i
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+  <!-- Jumbotron -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark nav-color">
+    <!-- Container wrapper -->
+    <div class="container d-flex justify-content-center">
+      <!-- Left links -->
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+          <a class="nav-link text-white" href="#">Jogos</a>
+        </li>
+        <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+          <a class="nav-link text-white" href="#">Consoles</a>
+        </li>
+        <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+          <a class="nav-link text-white" href="#">Perifericos</a>
+        </li>
+        <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+          <a class="nav-link text-white" href="#">Computadores</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+</header>

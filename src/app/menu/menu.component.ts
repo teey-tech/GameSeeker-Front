@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, public auth: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0, 0);
+  }
+
+  logout() {
+    document.location.reload();
+    localStorage.clear();
   }
 
 }

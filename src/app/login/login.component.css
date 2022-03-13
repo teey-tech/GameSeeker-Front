@@ -7,11 +7,11 @@
 }
 
 .gradient-colors {
-  background: linear-gradient(to right, #ad65ff, #86a7f0, #b069ff, #84a3ec);
+  background: linear-gradient(to right, #101535, #86a7f0, #b069ff, #101535);
 }
 
 .background-gradiant {
-  background: linear-gradient(to right, #ad65ff, #86a7f0, #b069ff, #84a3ec);
+  background: linear-gradient(to right, #101535, #86a7f0, #b069ff, #101535);
 }
 
 .border-card {
@@ -25,9 +25,8 @@
 .list-group-propieties {
   cursor: pointer;
 }
-@media (min-width: 769px) {
-  .gradient-custom-2 {
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-  }
+
+app-menu {
+  display: none;
+  overflow: hidden;
 }

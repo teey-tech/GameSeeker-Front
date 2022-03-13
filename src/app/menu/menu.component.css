@@ -8,3 +8,32 @@
 a {
   cursor: pointer;
 }
+
+.gradient-colors {
+  background: linear-gradient(to left, #101535, #86a7f0, #b069ff, #101535);
+}
+
+.auth-customization {
+  text-decoration: none;
+  color: white;
+}
+
+.auth-customization:hover {
+  color: black;
+}
+
+.search-positioning {
+  margin-right: 0rem;
+  z-index: 1;
+  position: absolute;
+  right: 1rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.nav-color {
+  background: linear-gradient(to right, #101535, #86a7f0, #b069ff, #101535);
+}

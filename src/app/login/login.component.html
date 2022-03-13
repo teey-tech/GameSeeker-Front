@@ -1,8 +1,8 @@
-<section id="login" class="h-100 gradient-form background-login">
+<section id="login" class="h-100 background-login container-fluid">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-10 col-lg-10">
-        <div class="card mb-3 rounded-4 text-black">
+        <div class="card mb-3 text-black">
           <div class="row g-0">
             <div class="col-md-6 col-lg-6 background-gradiant">
               <img
@@ -22,15 +22,20 @@
                         Login
                       </li>
                       <li
-                        class="list-group-item list-group-item-action list-group-propieties"
-                        routerLink="/register"
+                        class="list-group-item w-100 h-100 list-group-propieties"
+                        routerLink="/login"
                       >
                         Register
+                      </li>
+                      <li
+                        class="list-group-item list-group-item-action list-group-propieties"
+                        routerLink="/home"
+                      >
+                        Home
                       </li>
                     </ul>
                   </div>
                 </div>
-
                 <div class="text-center">
                   <img
                     src="../../assets/imgs/logo.png"
@@ -52,6 +57,7 @@
                       id="email"
                       placeholder="Example: email@email.com"
                       aria-describedby="email"
+                      [(ngModel)]="userLogin.email"
                     />
                     <div id="emailShare" class="form-text">
                       We'll never share your email with anyone else.
@@ -65,14 +71,16 @@
                       placeholder="Example: coxinha123"
                       class="form-control"
                       id="password"
+                      [(ngModel)]="userLogin.password"
                     />
                   </div>
                   <div class="d-grid gap-2 mx-auto mt-4">
                     <button
                       class="btn btn-primary gradient-colors"
-                      type="button"
+                      type="submit"
+                      (click)="login()"
                     >
-                      Entrar
+                      Sign-In
                     </button>
                   </div>
                 </form>
