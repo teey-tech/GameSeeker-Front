@@ -27,4 +27,26 @@
   cursor: pointer;
 }
 
+.buttonVagas {
+  background-color: #fffaf8 !important;
+  border: 2px solid #be4137 !important;
+  color: #be4137 !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  border-radius: 50px !important;
+  transition: 0.5s !important;
+}
+
+.buttonVagas:hover {
+  background-color: #ffe1dd !important;
+  color: #be4137 !important;
+}
+
+.button-option-1 {
+  background-color: #be4137 !important;
+}
+
+.button-option-2 {
+  background-color: #e8dcda !important;
+}
 /*  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */

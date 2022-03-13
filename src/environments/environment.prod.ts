@@ -4,6 +4,7 @@ export const environment = {
   token: '',
   picture: '',
   cpf: '',
+  seekerCoins: 0,
   address: '',
   state: '',
   country: '',
